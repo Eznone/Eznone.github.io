@@ -5,14 +5,17 @@ import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
   base: mode === "development" ? "/" : "/Eznone.github.io/",
+  build: {
+    outDir: "docs",
+    emptyOutDir: true,
+  },
   server: {
     host: "::",
     port: 8080,
   },
-  plugins: [
-    react(),
-    mode === "development" && componentTagger(),
-  ].filter(Boolean),
+  plugins: [react(), mode === "development" && componentTagger()].filter(
+    Boolean
+  ),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
