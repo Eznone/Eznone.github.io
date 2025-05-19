@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: mode === "development" ? "/" : "/Eznome.github.io/",
+  base: mode === "development" ? "/" : "/Eznone.github.io/",
   server: {
     host: "::",
     port: 8080,
