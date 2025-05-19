@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: mode === "development" ? "/" : "/Eznone.github.io/",
+  base: mode === "development" ? "/" : "./",
   build: {
     outDir: "docs",
     emptyOutDir: true,
